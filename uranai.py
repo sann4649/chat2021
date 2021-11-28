@@ -269,7 +269,7 @@ def myuranai(input_text):
         if int(frame['birthday']) % 11 == 0:
           break
     #s = int(s)
-    if '11' in frame['birthday']:
+    if '' in frame['birthday']:
       return 'ソウルナンバーは11'
     return 'そそそ'
     
