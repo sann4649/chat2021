@@ -247,34 +247,46 @@ def myuranai(input_text):
 
   if 'color1' not in frame:
     frame['asking'] = 'color1' # あなたの色  
-    return 'まずはあなたの色を入力してください。'
+    return 'まずはあなたのイメージカラーを入力してください。'
 
   if 'color1' in frame and 'color2' not in frame:
     frame['asking'] = 'color2' # 相手の色    
-    return 'まずはあなたの色を入力してください。'
+    return 'お相手のイメージカラーを入力してください。'
   
   if 'color1' in frame and 'color2' in frame:
     
     if '赤色' in frame['color1'] and '赤色' in frame['color2']:
       return '赤色を選んだあなたは情熱的で行動力があり、とにかく一歩前へ前進する性格です。'
-    if '青色' in frame['color']:
-      return '青色を選んだあなたは冷静で争い事が好きではない平和主義な性格です。'
-    if '黄色' in frame['color']:
+    if '赤色' in frame['color1'] and '黄色' in frame['color2']:
+      return '赤色を選んだあなたは情熱的で行動力があり、とにかく一歩前へ前進する性格です。黄色お相手はとにかく明るくて、ユーモアがあり、知性溢れる性格です。'
+    if '赤色' in frame['color1'] and '青色' in frame['color2']:
+      return '赤色を選んだあなたは情熱的で行動力があり、とにかく一歩前へ前進する性格です。青色を選んだお相手は冷静で争い事が好きではない平和主義な性格です。'
+    if '赤色' in frame['color1'] and '緑色' in frame['color2']:
+      return '赤色を選んだあなたは情熱的で行動力があり、とにかく一歩前へ前進する性格です。'
+    if '黄色' in frame['color1'] and '赤色' in frame['color2']:
       return '黄色を選んだあなたはとにかく明るくて、ユーモアがあり、知性溢れる性格です。'
-    if '緑色' in frame['color']:
+    if '黄色' in frame['color1'] and '黄色' in frame['color2']:
+      return '黄色を選んだあなたはとにかく明るくて、ユーモアがあり、知性溢れる性格です。'
+    if '黄色' in frame['color1'] and '青色' in frame['color2']:
+      return '黄色を選んだあなたはとにかく明るくて、ユーモアがあり、知性溢れる性格です。'
+    if '黄色' in frame['color1'] and '緑色' in frame['color2']:
+      return '黄色を選んだあなたはとにかく明るくて、ユーモアがあり、知性溢れる性格です。'
+    if '青色' in frame['color1'] and '赤色' in frame['color2']:
+      return '青色を選んだあなたは冷静で争い事が好きではない平和主義な性格です。'
+    if '青色' in frame['color1'] and '黄色' in frame['color2']:
+      return '青色を選んだあなたは冷静で争い事が好きではない平和主義な性格です。'
+    if '青色' in frame['color1'] and '青色' in frame['color2']:
+      return '青色を選んだあなたは冷静で争い事が好きではない平和主義な性格です。'
+    if '青色' in frame['color1'] and '緑色' in frame['color2']:
+      return '青色を選んだあなたは冷静で争い事が好きではない平和主義な性格です。'
+    if '緑色' in frame['color1'] and '赤色' in frame['color2']:
       return '緑色を選んだあなたは内に秘めた情熱を持ちつつ、視野を広く見ていける性格です。'
-    if 'ピンク色' in frame['color']:
-      return 'ピンク色を選んだあなたは無条件の愛を持っており、思いやりがある性格です。'
-    if 'オレンジ色' in frame['color']:
-      return 'オレンジ色を選んだあなたは独立心があり、洞察力を持っている社交的な性格です。'
-    if '黄緑色' in frame['color']:
-      return '色を選んだあなたは好奇心旺盛で友達が多く、人見知りをしない性格です。'
-    if '水色' in frame['color']:
-      return '水色を選んだあなたは緻密な思考力を兼ね備えており、気遣いもできる性格です。'
-    if '灰色' in frame['color']:
-      return '灰色を選んだあなたは努力家で、何事も必ず最後までやり遂げる性格です。'
-    if '茶色' in frame['color']:
-      return '茶色を選んだあなたは多くの人から信頼されやすく、責任感が強い性格です。'
+    if '緑色' in frame['color1'] and '黄色' in frame['color2']:
+      return '緑色を選んだあなたは内に秘めた情熱を持ちつつ、視野を広く見ていける性格です。'
+    if '緑色' in frame['color1'] and '青色' in frame['color2']:
+      return '緑色を選んだあなたは内に秘めた情熱を持ちつつ、視野を広く見ていける性格です。'
+    if '緑色' in frame['color1'] and '緑色' in frame['color2']:
+      return '緑色を選んだあなたは内に秘めた情熱を持ちつつ、視野を広く見ていける性格です。'
     
     return 'もう一度やり直してください。'
 
