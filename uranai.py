@@ -271,7 +271,7 @@ def myuranai(input_text):
     return 'あなたの運勢は吉'"""
     
     #s = int(s)
-    if frame['birthday'] == 11:
+    if frame['birthday']:
       return 'ソウルナンバーは11'
     return 'そそそ'
     
