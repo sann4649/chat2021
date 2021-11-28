@@ -14,7 +14,7 @@ def chat(text, **kw):  #チャット用の関数（ここを書き換える）
 BOT_ICON = 'https://2.bp.blogspot.com/-mRJKwyORJkQ/Wn1ZTOBrszI/AAAAAAABKKs/Bg5yjLL9RYwmfUM0pEkBA3Ky3ui0IOZWQCLcBGAs/s800/animal_smile_inu.png'
 YOUR_ICON = 'https://4.bp.blogspot.com/-SC6_6x7MQnc/Wn1ZUkdcPxI/AAAAAAABKK8/qqHVlc8E7lEGsEwJ_J8H6Gp9RvfhTX67wCLcBGAs/s800/animal_smile_neko.png'
 
-def run_chat(chat = chat, start='占いするよ', **kw):
+def run_chat(chat = chat, start='ようこそ。あなたの生年月日と選ばれたお好きな色で秘められた才能を占います。', **kw):
 
   def display_bot(bot_text):
     with output.redirect_to_element('#output'):
@@ -247,16 +247,19 @@ def myuranai(input_text):
 
   if 'name' not in frame:
     frame['asking'] = 'name' # 名前をたずねる  
-    return 'あなたの名前は？'
+    return 'まずはあなたのニックネームを入力してください。'
 
   if 'name' in frame and 'birthday' not in frame:
     frame['asking'] = 'birthday' # 誕生日をたずねる    
-    return 'あなたの誕生日は？'
+    return '次に生年月日を半角数字8桁で入力してください。(例:2000年1月10日の場合20000110と入力してください。)'
+  
+  if 'name' in frame and 'birthday' in frame and 'color' not in frame:
+    frame['asking'] = 'color' # 色をたずねる  
+    return 'では最後に赤色、青色、黄色、白色、黒色、紫色、緑色、ピンク色、オレンジ色、黄緑色、水色、灰色、茶色からお好きな色を選び、選択肢の表記と同じ様に入力してください。(例:赤色を選択した場合、赤色と入力してください。)'
 
   if 'name' in frame and 'birthday' in frame:
     # 占います
-    number = hash(frame['name']+frame['birthday']) % 10
-    if number > 5:
+    if frame['color'] == 赤色:
       return 'あなたの運勢は大吉'
     return 'あなたの運勢は吉'
 
