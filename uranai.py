@@ -259,9 +259,12 @@ def myuranai(input_text):
 
   if 'name' in frame and 'birthday' in frame:
     # 占います
+    """number = hash(frame['name']+frame['birthday']) % 10
+    if number > 5:
+      return 'あなたの運勢は大吉'
+    return 'あなたの運勢は吉'"""
     
-    color = 'color'
-    if color == 赤色:
+    if 'color' == 赤色:
       return 'あなたの運勢は大吉'
     return 'あなたの運勢は吉'
 
