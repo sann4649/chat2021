@@ -254,9 +254,9 @@ def myuranai(input_text):
     return '次に生年月日を半角数字8桁で入力してください。(例:2000年1月10日の場合20000110と入力してください。)'
   
     def soulnumber(s):
-      while len(s) > 1:
-        s = str(sum(int(x) for x in frame['birthday']))
-        if int(s) % 11 == 0:
+      while len(frame['birthday']) > 1:
+        frame['birthday'] = str(sum(int(x) for x in frame['birthday']))
+        if int(frame['birthday']) % 11 == 0:
           break
   
   if 'name' in frame and 'birthday' in frame and 'color' not in frame:
@@ -270,8 +270,8 @@ def myuranai(input_text):
       return 'あなたの運勢は大吉'
     return 'あなたの運勢は吉'"""
     
-    s = int(s)
-    if s == 11:
+    #s = int(s)
+    if frame['birthday'] == 11:
       return 'ソウルナンバーは11'
     return 'そそそ'
     
