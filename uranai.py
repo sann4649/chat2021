@@ -266,9 +266,32 @@ def myuranai(input_text):
     
     if '赤色' in frame['color']:
       return '赤色を選んだあなたは情熱的で行動力があり、とにかく一歩前へ前進する性格です。'
+    if '青色' in frame['color']:
+      return '青色を選んだあなたは冷静で争い事が好きではない平和主義な性格です。'
     if '黄色' in frame['color']:
-      return '黄色を選んだあなたは情熱的で行動力があり、とにかく一歩前へ前進する性格です。'
-    return 'あなたの運勢は吉'
+      return '黄色を選んだあなたはとにかく明るくて、ユーモアがあり、知性溢れる性格です。'
+    if '白色' in frame['color']:
+      return '白色を選んだあなたはとにかく純粋でまっすぐな性格です。'
+    if '黒色' in frame['color']:
+      return '黒色を選んだあなたは主張せず、一人行動が好きでクールな性格です。'
+    if '紫色' in frame['color']:
+      return '紫色を選んだあなたは人の為に尽くすことに抵抗のない性格です。'
+    if '緑色' in frame['color']:
+      return '緑色を選んだあなたは内に秘めた情熱を持ちつつ、視野を広く見ていける性格です。'
+    if 'ピンク色' in frame['color']:
+      return 'ピンク色を選んだあなたは無条件の愛を持っており、思いやりがある性格です。'
+    if 'オレンジ色' in frame['color']:
+      return 'オレンジ色を選んだあなたは独立心があり、洞察力を持っている社交的な性格です。'
+    if '黄緑色' in frame['color']:
+      return '色を選んだあなたは好奇心旺盛で友達が多く、人見知りをしない性格です。'
+    if '水色' in frame['color']:
+      return '水色を選んだあなたは緻密な思考力を兼ね備えており、気遣いもできる性格です。'
+    if '灰色' in frame['color']:
+      return '灰色を選んだあなたは努力家で、何事も必ず最後までやり遂げる性格です。'
+    if '茶色' in frame['color']:
+      return '茶色を選んだあなたは多くの人から信頼されやすく、責任感が強い性格です。'
+    
+    return 'もう一度やり直してください。'
 
   return output_text
 
