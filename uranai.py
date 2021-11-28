@@ -14,7 +14,7 @@ def chat(text, **kw):  #チャット用の関数（ここを書き換える）
 BOT_ICON = 'https://3.bp.blogspot.com/-qbORCFE5qhk/UmTBJwEYKjI/AAAAAAAAZYY/nbjieynFcLQ/s800/job_uranaishi.png'
 YOUR_ICON = 'https://1.bp.blogspot.com/-ZOg0qAG4ewU/Xub_uw6q0DI/AAAAAAABZio/MshyuVBpHUgaOKJtL47LmVkCf5Vge6MQQCNcBGAsYHQ/s1600/pose_pien_uruuru_woman.png'
 
-def run_chat(chat = chat, start='ようこそ。あなたの生年月日と選ばれたお好きな色で秘められた才能を占います。', **kw):
+def run_chat(chat = chat, start='ようこそ。あなたと相手のイメージカラーで相性を占います。', **kw):
 
   def display_bot(bot_text):
     with output.redirect_to_element('#output'):
@@ -236,7 +236,7 @@ def run_chat(chat = chat, start='ようこそ。あなたの生年月日と選�
     display_bot(start)
 
 # フレーム 状態をもつ辞書
-# 'name', 'birthday', 'asking'
+# 'color1', 'color2', 'asking'
 frame = {}
 
 def myuranai(input_text):
@@ -245,37 +245,22 @@ def myuranai(input_text):
     frame[frame['asking']] = input_text
     del frame['asking']
 
-  if 'name' not in frame:
-    frame['asking'] = 'name' # 名前をたずねる  
-    return 'まずはあなたのニックネームを入力してください。'
+  if 'color1' not in frame:
+    frame['asking'] = 'color1' # あなたの色  
+    return 'まずはあなたの色を入力してください。'
 
-  if 'name' in frame and 'birthday' not in frame:
-    frame['asking'] = 'birthday' # 誕生日をたずねる    
-    return '次に生年月日を半角数字8桁で入力してください。(例:2000年1月10日の場合20000110と入力してください。)'
+  if 'color1' in frame and 'color2' not in frame:
+    frame['asking'] = 'color2' # 相手の色    
+    return 'まずはあなたの色を入力してください。'
   
-  if 'name' in frame and 'birthday' in frame and 'color' not in frame:
-    frame['asking'] = 'color' # 色をたずねる  
-    return 'では最後に赤色、青色、黄色、白色、黒色、紫色、緑色、ピンク色、オレンジ色、黄緑色、水色、灰色、茶色からお好きな色を選び、選択肢の表記と同じ様に入力してください。(例:赤色を選択した場合、赤色と入力してください。)'
-
-  if 'name' in frame and 'birthday' in frame:
-    # 占います
-    """number = hash(frame['name']+frame['birthday']) % 10
-    if number > 5:
-      return 'あなたの運勢は大吉'
-    return 'あなたの運勢は吉'"""
+  if 'color1' in frame and 'color2' in frame:
     
-    if '赤色' in frame['color']:
+    if '赤色' in frame['color1'] and '赤色' in frame['color2']:
       return '赤色を選んだあなたは情熱的で行動力があり、とにかく一歩前へ前進する性格です。'
     if '青色' in frame['color']:
       return '青色を選んだあなたは冷静で争い事が好きではない平和主義な性格です。'
     if '黄色' in frame['color']:
       return '黄色を選んだあなたはとにかく明るくて、ユーモアがあり、知性溢れる性格です。'
-    if '白色' in frame['color']:
-      return '白色を選んだあなたはとにかく純粋でまっすぐな性格です。'
-    if '黒色' in frame['color']:
-      return '黒色を選んだあなたは主張せず、一人行動が好きでクールな性格です。'
-    if '紫色' in frame['color']:
-      return '紫色を選んだあなたは人の為に尽くすことに抵抗のない性格です。'
     if '緑色' in frame['color']:
       return '緑色を選んだあなたは内に秘めた情熱を持ちつつ、視野を広く見ていける性格です。'
     if 'ピンク色' in frame['color']:
