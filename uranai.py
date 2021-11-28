@@ -259,6 +259,9 @@ def myuranai(input_text):
 
   if 'name' in frame and 'birthday' in frame:
     # 占います
+    
+    color == frame['color']
+    
     if color == 赤色:
       return 'あなたの運勢は大吉'
     return 'あなたの運勢は吉'
