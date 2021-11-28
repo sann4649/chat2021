@@ -263,12 +263,11 @@ def myuranai(input_text):
     if number > 5:
       return 'あなたの運勢は大吉'
     return 'あなたの運勢は吉'"""
-    
-      def soulnumber(s):
-        while len(frame['birthday']) > 1:
-          frame['birthday'] = str(sum(int(x) for x in frame['birthday']))
-            if int(frame['birthday']) % 11 == 0:
-              break
+    def soulnumber(s):
+      while len(frame['birthday']) > 1:
+        frame['birthday'] = str(sum(int(x) for x in frame['birthday']))
+        if int(frame['birthday']) % 11 == 0:
+          break
     #s = int(s)
     if '' in frame['birthday']:
       return 'ソウルナンバーは11'
