@@ -11,14 +11,14 @@ def chat(text, **kw):  #チャット用の関数（ここを書き換える）
   return 'ほ' * n
 
 # アイコンの指定
-BOT_ICON = 'https://3.bp.blogspot.com/-qbORCFE5qhk/UmTBJwEYKjI/AAAAAAAAZYY/nbjieynFcLQ/s800/job_uranaishi.png'
-YOUR_ICON = 'https://1.bp.blogspot.com/-ZOg0qAG4ewU/Xub_uw6q0DI/AAAAAAABZio/MshyuVBpHUgaOKJtL47LmVkCf5Vge6MQQCNcBGAsYHQ/s1600/pose_pien_uruuru_woman.png'
+BOT_ICON = 'https://2.bp.blogspot.com/-mRJKwyORJkQ/Wn1ZTOBrszI/AAAAAAABKKs/Bg5yjLL9RYwmfUM0pEkBA3Ky3ui0IOZWQCLcBGAs/s800/animal_smile_inu.png'
+YOUR_ICON = 'https://4.bp.blogspot.com/-SC6_6x7MQnc/Wn1ZUkdcPxI/AAAAAAABKK8/qqHVlc8E7lEGsEwJ_J8H6Gp9RvfhTX67wCLcBGAs/s800/animal_smile_neko.png'
 
 def run_chat(chat = chat, start='ようこそ。あなたの生年月日と選ばれたお好きな色で秘められた才能を占います。', **kw):
 
   def display_bot(bot_text):
     with output.redirect_to_element('#output'):
-      bot_name = kw.get('bot_name', '占い師')
+      bot_name = kw.get('bot_name', 'ボット')
       bot_icon = kw.get('bot_icon', BOT_ICON)
       display(IPython.display.HTML(f'''
       <div class="sb-box">
@@ -263,16 +263,8 @@ def myuranai(input_text):
     if number > 5:
       return 'あなたの運勢は大吉'
     return 'あなたの運勢は吉'"""
-    def soulnumber(s):
-      while len(s) > 1:
-        s = str(sum(int(x) for x in frame['birthday']))
-        if int(s) % 11 == 0:
-          break
-    if s == "11":
-      return 'ソウルナンバーは11'
-    return 'そそそ'
     
-    """if '赤色' in frame['color']:
+    if '赤色' in frame['color']:
       return '赤色を選んだあなたは情熱的で行動力があり、とにかく一歩前へ前進する性格です。'
     if '青色' in frame['color']:
       return '青色を選んだあなたは冷静で争い事が好きではない平和主義な性格です。'
@@ -297,7 +289,7 @@ def myuranai(input_text):
     if '灰色' in frame['color']:
       return '灰色を選んだあなたは努力家で、何事も必ず最後までやり遂げる性格です。'
     if '茶色' in frame['color']:
-      return '茶色を選んだあなたは多くの人から信頼されやすく、責任感が強い性格です。'"""
+      return '茶色を選んだあなたは多くの人から信頼されやすく、責任感が強い性格です。'
     
     return 'もう一度やり直してください。'
 
