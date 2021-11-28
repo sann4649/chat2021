@@ -266,6 +266,8 @@ def myuranai(input_text):
     
     if '赤色' in frame['color']:
       return '赤色を選んだあなたは情熱的で行動力があり、とにかく一歩前へ前進する性格です。'
+    if '黄色' in frame['color']:
+      return '黄色を選んだあなたは情熱的で行動力があり、とにかく一歩前へ前進する性格です。'
     return 'あなたの運勢は吉'
 
   return output_text
