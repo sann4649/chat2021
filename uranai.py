@@ -269,7 +269,7 @@ def myuranai(input_text):
         if int(s) % 11 == 0:
           break
     #s = int(s)
-    if '11' in str(s):
+    if str(s) == '11':
       return 'ソウルナンバーは11'
     return 'そそそ'
     
