@@ -253,12 +253,6 @@ def myuranai(input_text):
     frame['asking'] = 'birthday' # 誕生日をたずねる    
     return '次に生年月日を半角数字8桁で入力してください。(例:2000年1月10日の場合20000110と入力してください。)'
   
-    def soulnumber(s):
-      while len(frame['birthday']) > 1:
-        frame['birthday'] = str(sum(int(x) for x in frame['birthday']))
-        if int(frame['birthday']) % 11 == 0:
-          break
-  
   if 'name' in frame and 'birthday' in frame and 'color' not in frame:
     frame['asking'] = 'color' # 色をたずねる  
     return 'では最後に赤色、青色、黄色、白色、黒色、紫色、緑色、ピンク色、オレンジ色、黄緑色、水色、灰色、茶色からお好きな色を選び、選択肢の表記と同じ様に入力してください。(例:赤色を選択した場合、赤色と入力してください。)'
@@ -270,8 +264,13 @@ def myuranai(input_text):
       return 'あなたの運勢は大吉'
     return 'あなたの運勢は吉'"""
     
+      def soulnumber(s):
+        while len(frame['birthday']) > 1:
+          frame['birthday'] = str(sum(int(x) for x in frame['birthday']))
+            if int(frame['birthday']) % 11 == 0:
+              break
     #s = int(s)
-    if '19991216' in frame['birthday']:
+    if '' in frame['birthday']:
       return 'ソウルナンバーは11'
     return 'そそそ'
     
