@@ -267,7 +267,7 @@ def myuranai(input_text):
       while len(s) > 1:
         s = str(sum(int(x) for x in frame['birthday']))
         if int(s) % 11 == 0:
-          break
+          return s
     frame['birthday'] == str(s)
     if '11' in frame['birthday']:
       return 'ソウルナンバーは11'
