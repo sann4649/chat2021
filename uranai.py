@@ -253,7 +253,7 @@ def myuranai(input_text):
     frame['asking'] = 'birthday' # 誕生日をたずねる    
     return '次に生年月日を半角数字8桁で入力してください。(例:2000年1月10日の場合20000110と入力してください。)'
   
-    def soulnumber(frame['birthday']):
+    def soulnumber(s):
       while len(frame['birthday']) > 1:
         frame['birthday'] = str(sum(int(x) for x in frame['birthday']))
         if int(frame['birthday']) % 11 == 0:
