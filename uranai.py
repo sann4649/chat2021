@@ -264,7 +264,7 @@ def myuranai(input_text):
       return 'あなたの運勢は大吉'
     return 'あなたの運勢は吉'"""
     
-    if 'color' == 赤色:
+    if 'color' == '赤色':
       return 'あなたの運勢は大吉'
     return 'あなたの運勢は吉'
 
