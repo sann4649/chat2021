@@ -268,8 +268,8 @@ def myuranai(input_text):
         s = str(sum(int(x) for x in frame['birthday']))
         if int(s) % 11 == 0:
           break
-    #s = int(s)
-    if str(s) == '11':
+    frame['birthday'] == str(s)
+    if '11' in frame['birthday']:
       return 'ソウルナンバーは11'
     return 'そそそ'
     
