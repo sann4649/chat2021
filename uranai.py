@@ -270,6 +270,7 @@ def myuranai(input_text):
       return 'あなたの運勢は大吉'
     return 'あなたの運勢は吉'"""
     
+    s = int(s)
     if s == 11:
       return 'ソウルナンバーは11'
     return 'そそそ'
