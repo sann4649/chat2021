@@ -247,11 +247,11 @@ def myuranai(input_text):
 
   if 'color1' not in frame:
     frame['asking'] = 'color1' # あなたの色  
-    return 'まずはあなたのイメージカラーを入力してください。'
+    return 'まずは赤色、黄色、青色、緑色の中からあなたのイメージカラーを入力してください。(選択肢の表記と同じ様に入力してください。例えば赤色を選択した場合、赤色と入力してください。)'
 
   if 'color1' in frame and 'color2' not in frame:
     frame['asking'] = 'color2' # 相手の色    
-    return 'お相手のイメージカラーを入力してください。'
+    return 'まずは赤色、黄色、青色、緑色の中からお相手のイメージカラーを入力してください。(選択肢の表記と同じ様に入力してください。例えば赤色を選択した場合、赤色と入力してください。)'
   
   if 'color1' in frame and 'color2' in frame:
     
