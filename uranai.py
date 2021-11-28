@@ -268,8 +268,7 @@ def myuranai(input_text):
       return '赤色を選んだあなたは情熱的で行動力があり、とにかく一歩前へ前進する性格です。'
     if 'color' == '黄色':
       return '黄色を選んだあなたはとにかく明るくて、ユーモアがあり、知性溢れる性格です。'
-    else:
-      return 'あなたの運勢は吉'
+    return 'あなたの運勢は吉'
 
   return output_text
 
